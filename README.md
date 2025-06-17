@@ -37,6 +37,24 @@ contract MyNFT is ERC721Base {
         uint128 _royaltyBps
     ) ERC721Base(_defaultAdmin, _name, _symbol, _royaltyRecipient, _royaltyBps) {}
 }
+npm i thirdweb
+import {
+  createThirdwebClient,
+  getContract,
+} from "thirdweb";
+import { defineChain } from "thirdweb/chains";
+
+// create the client with your clientId, or secretKey if in a server environment
+const client = createThirdwebClient({
+  clientId: "",
+});
+
+// connect to your contract
+const contract = getContract({
+  client,
+  chain: defineChain(8453),
+  address: "0x8B5EED3184Ba83BCb2627df60d974aAC94e81a56",
+});
 
 ## Environment Variables
 
