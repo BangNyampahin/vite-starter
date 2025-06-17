@@ -46,7 +46,7 @@ import { defineChain } from "thirdweb/chains";
 
 // create the client with your clientId, or secretKey if in a server environment
 const client = createThirdwebClient({
-  clientId: "",
+  clientId: "2509b4189ca0092f9113adc3c7996ae1",
 });
 
 // connect to your contract
@@ -55,12 +55,30 @@ const contract = getContract({
   chain: defineChain(8453),
   address: "0x8B5EED3184Ba83BCb2627df60d974aAC94e81a56",
 });
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+import "@thirdweb-dev/contracts/base/ERC721Base.sol";
+
+contract MyNFT is ERC721Base {
+    constructor(
+        address _defaultAdmin,
+        string memory _name,
+        string memory _symbol,
+        address _royaltyRecipient,
+        uint128 _royaltyBps
+    ) ERC721Base(_defaultAdmin, _name, _symbol, _royaltyRecipient, _royaltyBps) {}
+}
+[/Script/Thirdweb.ThirdwebRuntimeSettings]
+ClientID=
+BundleID=
+
 
 ## Environment Variables
 
 To run this project, you will need to add the following environment variables to your .env file:
 
-`CLIENT_ID`
+`2509b4189ca0092f9113adc3c7996ae1`
 
 To learn how to create a client ID, refer to the [client documentation](https://portal.thirdweb.com/typescript/v5/client). 
 
