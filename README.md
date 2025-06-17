@@ -14,6 +14,8 @@ Starter template to build onchain applications with [thirdweb](https://thirdweb.
 
 Install the template using [thirdweb create](https://portal.thirdweb.com/cli/create)
 
+npx thirdweb install
+
 ```bash
   npx thirdweb create app --vite
 ```
